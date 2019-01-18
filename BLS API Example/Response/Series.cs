@@ -1,9 +1,11 @@
-﻿namespace BLS_API_Example.Response
+﻿using System.Collections.Generic;
+
+namespace BLS_API_Example.Response
 {
     public class Series
     {
         public string seriesID { get; set; }
 
-        public BLSData Data { get; set; }
+        public IList<BLSData> Data { get; set; }
     }
 }

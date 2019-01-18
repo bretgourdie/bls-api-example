@@ -51,7 +51,7 @@
     <Compile Include="Response\BLSData.cs" />
     <Compile Include="Response\FootNote.cs" />
     <Compile Include="Response\BLSResponse.cs" />
-    <Compile Include="Response\MultipleSeries.cs" />
+    <Compile Include="Response\ResultsSeries.cs" />
     <Compile Include="Response\Series.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
