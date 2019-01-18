@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Payload\SeriesAndYearPayload.cs" />
     <Compile Include="Payload\SeriesPayload.cs" />
     <Compile Include="Response\BLSData.cs" />
     <Compile Include="Response\FootNote.cs" />
