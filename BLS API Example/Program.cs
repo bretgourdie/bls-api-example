@@ -13,6 +13,7 @@ namespace BLS_API_Example
 
             singleSeriesTest(client);
             multipleSeriesTest(client);
+            multipleSeriesAndYearsTest(client);
         }
 
         static void singleSeriesTest(IRestClient restClient)
@@ -43,6 +44,35 @@ namespace BLS_API_Example
 
             var request = new RestRequest(Method.POST);
             request.AddJsonBody(seriesPayload);
+
+            var response = restClient.Execute<BLSResponse>(request);
+
+            if (response.IsSuccessful)
+            {
+                var result = response.Data.Results;
+            }
+        }
+
+        static void multipleSeriesAndYearsTest(IRestClient restClient)
+        {
+            var listOfSeries = new List<string>()
+            {
+                "LAUCN040010000000005",
+                "LAUCN040010000000006"
+            };
+
+            const int startYear = 2010;
+            const int endYear = 2012;
+
+            var seriesAndYearsPayload = new SeriesAndYearsPayload()
+            {
+                seriesid = listOfSeries,
+                startyear = startYear,
+                endyear = endYear
+            };
+
+            var request = new RestRequest(Method.POST);
+            request.AddJsonBody(seriesAndYearsPayload);
 
             var response = restClient.Execute<BLSResponse>(request);
 
