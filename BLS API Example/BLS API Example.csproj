@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Payload\SeriesAndYearPayload.cs" />
     <Compile Include="Payload\SeriesPayload.cs" />
+    <Compile Include="ReportFormat\EllenFormat.cs" />
     <Compile Include="Response\BLSData.cs" />
     <Compile Include="Response\FootNote.cs" />
     <Compile Include="Response\BLSResponse.cs" />

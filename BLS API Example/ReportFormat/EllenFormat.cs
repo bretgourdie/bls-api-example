@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-namespace BLS_API_Example.Response
+﻿namespace BLS_API_Example.ReportFormat
 {
-    public class BLSData
+    public class EllenFormat
     {
+        public string SeriesID { get; set; }
         public int Year { get; set; }
         public string Period { get; set; }
         public string PeriodName { get; set; }
         public int Value { get; set; }
-        public IList<FootNote> FootNotes { get; set; }
     }
 }
